@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import PostFeed from './PostFeed/post-feed-component';
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoggedIn: false,
+      imageFeed: []
+    }
+  }
+
+  // componentDidMount() {
+  //   fetch("https://api.nasa.gov/planetary/apod?api_key=iqdS8Df0jwyccz14dVTF0JIVV4vkoPWjJWdQwtek")
+  //   .then(response => response.json())
+  //   .then(posts => this.setState({ imageFeed: posts}));
+
+  // }
+  render() {
+    return (
+      <PostFeed posts = {this.state.imageFeed}/>
+    )
+  }
+  
 }
 
 export default App;
