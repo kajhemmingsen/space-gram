@@ -1,0 +1,21 @@
+ .like-button {
+     cursor: pointer;
+     justify-content: center;
+     background-color:white;
+     font-weight: bolder;
+     height:35px;
+     width: 100px;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+     line-height: 35px;
+     border-color: grey;
+     border-radius: 12px;
+     font-family: Dongle;
+     font-size: 30px;
+ }
+
+ .like-button:hover {
+     background-color: pink;
+     color: white;
+     border-color: black;
+ }

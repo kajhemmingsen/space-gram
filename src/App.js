@@ -13,15 +13,17 @@ class App extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   fetch("https://api.nasa.gov/planetary/apod?api_key=iqdS8Df0jwyccz14dVTF0JIVV4vkoPWjJWdQwtek")
-  //   .then(response => response.json())
-  //   .then(posts => this.setState({ imageFeed: posts}));
+  componentDidMount() {
+    fetch("https://api.nasa.gov/planetary/apod?api_key=iqdS8Df0jwyccz14dVTF0JIVV4vkoPWjJWdQwtek&count=10")
+    .then(response => response.json())
+    .then(response => this.setState({ imageFeed: response}));
 
-  // }
+  }
   render() {
     return (
-      <PostFeed posts = {this.state.imageFeed}/>
+      <div className='page'>
+        <PostFeed posts = {this.state.imageFeed}/>
+      </div>
     )
   }
   

@@ -1,6 +1,8 @@
 import React from 'react'
 import PostItem from '../PostItem/post-item-component'
 
+import './post-feed-styles.css'
+
 const PostFeed = ({posts}) => {
     const postArray = posts.map((post, i) => {
         return (<PostItem
@@ -13,7 +15,7 @@ const PostFeed = ({posts}) => {
     });
 
     return (
-        <div>
+        <div className='post-feed'>
             {postArray}
         </div>
     );
