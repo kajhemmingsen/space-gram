@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 
 import PostFeed from './PostFeed/post-feed-component';
+import Header from './Header/header-component';
 
 class App extends React.Component {
   constructor() {
@@ -22,6 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='page'>
+        <Header/>
         <PostFeed posts = {this.state.imageFeed}/>
       </div>
     )
